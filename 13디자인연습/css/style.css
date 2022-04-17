@@ -1,0 +1,210 @@
+/* header디자인 */
+
+.custom-header .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+}
+.custom-header .navbar-inverse{ 
+    background-color: #282A35;
+}
+
+.custom-header .navbar-inverse .navbar-nav > .active > a {
+    background-color: #384aa5;
+    /*가상 선택자는 개발자 도구에서 따로 체크박스 체크해줘야함*/
+}
+
+.custom-header .navbar-inverse .navbar-nav > li > a:hover, 
+.custom-header .navbar-inverse .navbar-nav > li > a:focus  {
+    background-color: #464852;
+}
+
+.custom-header .navbar-inverse .navbar-nav > li > a  {
+    color: #fff; /*글자*/
+}
+
+.custom-header .navbar-brand {
+    padding: 10px 20px;
+}
+
+.custom-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; /*포지션 픽스 하면 너비가 조금 줄기때문에 100퍼 필수*/
+    z-index: 20;
+}
+
+/*footer 스타일*/
+
+footer {
+    background-color:  #282A35;
+    margin-top: 50px;
+}
+
+footer address {margin: 0;}
+
+footer .copyright {
+    color: #fff;
+    padding: 30px 0;
+}
+footer .footer_menu {overflow: hidden; padding: 30px 0;}
+footer .footer_menu .copyright_menu {float: right;}
+footer li { display: inline;}
+footer li a {display: inline-block; padding: 0 5px;}
+footer li a {
+    color: #fff;
+}
+
+.slide-list {
+    padding: 0;
+}
+.carousel-control.right { 
+    background-image:  linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.carousel-control.left{
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%); ;
+}
+
+.prod-list, .prod-link {
+    border: 1px solid #777;
+    display: block;
+    text-align: center;
+}
+
+.prod-list, .prod-inner {
+    padding: 5px;
+}
+
+.prod-link {
+    position: relative;
+}
+
+.prod-link .arrow{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ccc;
+    color: #fff;
+    position: absolute; /*상자 기반으로 띄움*/
+    left: 15px;
+    bottom: 15px;
+    opacity: 1;
+}
+
+.prod-link .hover {
+    width: 100px;
+    background-color: #4285f4;
+    opacity: 0; /* 투명도 1-보임, 0-안보임 */
+}
+
+.prod-link:hover {
+    border: 1px solid #4285f4;
+}
+
+.prod-link:hover > .arrow {
+    opacity: 0;
+}
+
+.prod-link:hover > .hover {
+    opacity: 1;
+}
+
+section{
+    padding: 60px 0;
+}
+
+section .box {
+    width: 920px;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.blog-style {
+    overflow: hidden;
+    text-align: center;
+}
+
+.blog-style li{
+    float: left;
+    padding: 0px 15px;
+    height: 100%;
+}
+
+.blog-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.blog-inner .blog-hover p{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+    
+}
+
+.blog-inner .blog-hover a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+
+
+.blog-info strong{
+    float: right;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.blog-inner .blog-hover a:hover > p{
+    opacity: 1;
+}
+
+.blog-content{
+    padding: 15px 20px;
+}
+
+.blog-content > p{
+    font-size: 15px;
+    font-weight: 15px;
+    height: 60px;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.blog-info{
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.blog-info ul {
+    float: left;
+}
+.blog-info ul li{
+    float: left;
+    padding: 0%;
+    color:#FDCC11;
+    font-size: 15px;;
+}
+
+
+
+@media(min-width:1200px){
+    .blog-style > li[class *= "col-lg-2"]{
+        width: 20%;
+    }
+}

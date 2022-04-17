@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; list-style: none;}
+        .top {background-image: url('img/bg.png'); text-align: center; }
+        body {background-image: url('img/bg.png');}
+        .top img {padding: 20px;}
+        .menu-wrap .menu {background-color: black; text-align: center; width: 100%;}
+        .menu-wrap .menu li {display: inline;}
+        .menu-wrap .menu li a {display: inline-block; text-decoration: none; color: white; width: 80px; height: 50px; line-height: 50px;}
+        .boxs {width: 800px; overflow: hidden;  margin: 0 auto;}
+        .box-wrap {background-color: white; }
+        .boxs li {display: block; text-align: center; float: left; width: 15%; box-sizing: border-box; margin: 40px ;} 
+        .left {display: inline; position: absolute; top: 0px; left: -220px;}
+        .right {display: inline; position: absolute; top: 0px; left: 720px;} 
+        .main {position: relative;  margin: 0 auto; width: 700px; text-align: center;}
+        .main a{background-color: brown; position: fixed; right: 0; top: 0; width: 50px; height: 50px; line-height: 50px;}
+    </style>
+</head>
+<body>
+    <header class="top">
+        <img src="img/logo.jpg" alt="오류!">
+        <nav class="menu-wrap">
+            <ul class="menu">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="box-wrap">
+        <div class="box">
+            <ul class="boxs">
+                <li><img src="img/item01.png" alt="오류!"><br>iPhone</li>
+                <li><img src="img/item02.png" alt="오류!"><br>iPod</li>
+                <li><img src="img/item03.png" alt="오류!"><br>iPad</li>
+                <li><img src="img/item04.png" alt="오류!"><br>iMac</li>
+            </ul>
+        </div>
+    </article>
+    <section class="main">
+        <img src="img/ipad.jpg">
+        <a href="#">top</a>
+        <aside class="left">
+            <img class="left-move1" src="img/side01.png"><br><br>
+            <img class="left-move2"  src="img/side02.png">
+        </aside>
+        <aside class="right">
+            <img class="right-move1" src="img/side03.png"><br><br>
+            <img class="right-move2" src="img/side04.png">
+        </aside>
+    </section>
+
+
+</body>
+</html>

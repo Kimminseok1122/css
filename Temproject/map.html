@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=kb9jfea4wi"></script>
+</head>
+<body>
+<div id="map" style="width:100%;height:800px;"></div>
+
+<script>
+// var mapOptions = {
+//     center: new naver.maps.LatLng(37.3595704, 127.105399),
+//     zoom: 10
+// };
+
+// var map = new naver.maps.Map('map', mapOptions);
+
+
+var HOME_PATH = window.HOME_PATH || '.'; //단축평가 문자열이있는지 없는지 확인
+var cityhall = new naver.maps.LatLng(37.5666805, 126.9784147), //좌표값 설정
+    map = new naver.maps.Map('map', {
+        center: cityhall, 
+        zoom: 10 //처음에 지도 확대축소 정도
+    }),
+    marker = new naver.maps.Marker({
+        map: map, //맵
+        position: cityhall //위치를 설정한곳으로 쓴다
+    });
+
+ var HOME_PATH = window.HOME_PATH || '.';
+var position = new naver.maps.LatLng(37.3849483, 127.1229117);
+
+var map = new naver.maps.Map('map', {
+    center: position,
+    zoom: 19
+});
+
+var markerOptions = {
+    position: position.destinationPoint(90, 15),
+    map: map,
+    icon: {
+        url: HOME_PATH +'/img/example/sally.png',
+        size: new naver.maps.Size(50, 52),
+        origin: new naver.maps.Point(0, 0),
+        anchor: new naver.maps.Point(25, 26)
+    }
+};
+
+var marker = new naver.maps.Marker(markerOptions);
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>서울특별시청</h3>',
+        '   <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br />',
+        '       <img src="'+ HOME_PATH +'/img/example/hi-seoul.jpg" width="55" height="55" alt="서울시청" class="thumb" /><br />',
+        '       02-120 | 공공,사회기관 &gt; 특별,광역시청<br />',
+        '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+    //contentString은 배열로 선언해서 .join으로 최종적으로 문자열로 반환
+    //.join은 배열의 모든 요소를 연결한 하나의 문자열로 반환함
+    //괄호 안의 값이 구분자가됨 ''은 없으므로 모든 문자열이 하나로 표시됨
+
+    
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    maxWidth: 140,
+    backgroundColor: "#eee",
+    borderColor: "#090909",
+    borderWidth: 1,
+    anchorSize: new naver.maps.Size(30, 30),
+    //앵커사이즈는 클릭시 화살표 사이즈
+    anchorSkew: true,
+    //모르겠음
+    anchorColor: "#eee",
+    pixelOffset: new naver.maps.Point(20, -20)
+});
+
+//아마 지도에서 눌렀을때 인포화면
+//
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+
+</script>
+</body>
+</html>

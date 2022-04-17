@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- 부트스트랩 적용방법 (min or 일반 파일중 하나를 링크)-->
+    <!-- 링크 순서 중요 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- 개인디자인 (부트스트랩 아래에 위치)-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
+
+</head>
+<body>
+    
+    <header class="custom-header">
+        <nav class="navbar navbar-inverse">
+          <!-- 2. 헤더의 좌우 너비 container로 변경 -->
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- 로고 영역-->
+                <a class="navbar-brand" href="#">
+                  <img src="img/logo.svg" width="30">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">메인</a></li>
+                  <li><a href="#">글</a></li>
+                  <li><a href="#">QNA</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">목록
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Page 1-1</a></li>
+                      <li><a href="#">Page 1-2</a></li>
+                      <li><a href="#">Page 1-3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <!-- 우측 로그인 버튼 -->
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+                <!-- 검색창  (클래스 이름을 navbar-right로 변경)-->
+                <form class="navbar-form navbar-right" action="#"><!--action값은 변경될수있으니 #-->
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="내용을 검색하세요">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                        검색<!-- 부트스트랩 가보면 콤포넌트로 기본으로 제공해줌-->
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <article>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 slide-list">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                      
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="img/슬라이드이미지1.jpg" alt="Los Angeles">
+                          </div>
+                      
+                          <div class="item">
+                            <img src="img/슬라이드이미지2.jpg" alt="Chicago">
+                          </div>
+                      
+                          <div class="item">
+                            <img src="img/슬라이드이미지3.jpg" alt="New York">
+                          </div>
+                        </div>
+                      
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <section>
+        <div class="container">
+            <div class="row">
+
+                <h3> 쿠팡디자인(메인) </h3>
+
+                <div class="col-xs-12 prod-list"> <!-- xs에서 전체영역 --> <!-- 바깥 상자 -->
+                    <div class="col-sm-6 prod-inner"> <!-- 숨긱상자-->
+                            <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                                <img src="img/box1.jpg">
+                                <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                                <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                            </a>
+                    </div>
+                    <div class="col-sm-6 prod-inner"> <!-- 숨긱상자-->
+                        <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                            <img src="img/box2.jpg">
+                            <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                            <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 prod-inner"> <!-- 숨긱상자-->
+                        <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                            <img src="img/box3.jpg">
+                            <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                            <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 prod-inner"> <!-- 숨긱상자-->
+                        <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                            <img src="img/box4.jpg">
+                            <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                            <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 prod-inner"> <!-- 숨긱상자-->
+                        <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                            <img src="img/box5.jpg">
+                            <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                            <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 prod-inner"> <!-- 숨긱상자-->
+                        <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                            <img src="img/box6.jpg">
+                            <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                            <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-12 prod-inner"> <!-- 숨긱상자-->
+                        <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                            <img src="img/box7.jpg">
+                            <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                            <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 prod-inner"> <!-- 숨긱상자-->
+                        <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                            <img src="img/box8.jpg">
+                            <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                            <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 prod-inner"> <!-- 숨긱상자-->
+                        <a href="#" class="prod-link"> <!-- 안쪽 상자 -->
+                            <img src="img/box9.jpg">
+                            <span class="arrow"><i class="glyphicon glyphicon-chevron-right"></i></span> <!-- 화살표 부트스트랩에서 찾아서 i 태그 안에 넣어준다-->
+                            <span class="arrow hover">상세보기</span> <!-- 상세보기-->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 블로그 스타일 -->
+
+    <section>
+        <div class="container box">
+            <ul class="row blog-style">
+                <li class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="blog-inner" > <!-- 보더 -->
+                            <img src="img/blog1.jpg"> <!-- 이미지 영역 -->
+                            <div class="blog-content">
+                                <p>라벨영 쇼킹비타민 우유미백크림 미백최강 즉각톤업+기미파괴</p>
+                                <div class="blog-info">
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                    </ul>
+                                    <strong>99,000</strong>
+                                </div>
+                            </div>
+                            <div class="blog-hover">
+                                <a href="#">
+                                    <p>라벨영 쇼킹비타민 우유미백크림 미백최강 즉각톤업+기미파괴</p>
+                                </a>
+                            </div>   
+                    </div>
+                </li>
+                <li class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="blog-inner" >
+                            <img src="img/blog2.jpg">
+                            <div class="blog-content">
+                                <p>은율 파워 리페어 골드 앰플 4개입, 13ml, 1세트</p>
+                                <div class="blog-info">
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                    </ul>
+                                    <strong>99,000</strong>
+                                </div>
+                            </div>
+                            <div class="blog-hover">
+                                <a href="#">
+                                    <p>은율 파워 리페어 골드 앰플 4개입, 13ml, 1세트</p>
+                                </a>
+                            </div>   
+                    </div>
+                </li>
+                <li class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="blog-inner" >
+                            <img src="img/blog3.jpg">
+                            <div class="blog-content">
+                                <p>라벨영 쇼킹비타민 우유미백크림 미백최강 즉각톤업+기미파괴</p>
+                                <div class="blog-info">
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                    </ul>
+                                    <strong>99,000</strong>
+                                </div>
+                            </div>
+                            <div class="blog-hover">
+                                <a href="#">
+                                    <p>[참존] 5000mg 고함량 참 콜라겐 프리미엄 앰플 4주분 7입 x 4 box (유통기한: 2021-09-18까지), 4박스, 20mlx7병입/p>
+                                </a>
+                            </div>   
+                    </div>
+                </li>
+                <li class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="blog-inner" >
+                            <img src="img/blog4.jpg">
+                            <div class="blog-content">
+                                <p>에버콜라겐 인앤업 플러스 6주+미니쇼핑백 증정, 총30주분, 5병, 84정</p>
+                                <div class="blog-info">
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                    </ul>
+                                    <strong>99,000</strong>
+                                </div>
+                            </div>
+                            <div class="blog-hover">
+                                <a href="#">
+                                    <p>에버콜라겐 인앤업 플러스 6주+미니쇼핑백 증정, 총30주분, 5병, 84정</p>
+                                </a>
+                            </div>   
+                    </div>
+                </li>
+                <li class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="blog-inner" >
+                            <img src="img/blog5.jpg">
+                            <div class="blog-content">
+                                <p>이니스프리 수퍼 화산송이 모공 마스크팩 2X, 1개입, 1개</p>
+                                <div class="blog-info">
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                        <li><span class="glyphicon glyphicon-star-empty"></span></li>
+                                    </ul>
+                                    <strong>99,000</strong>
+                                </div>
+                            </div>
+                            <div class="blog-hover">
+                                <a href="#">
+                                    <p>이니스프리 수퍼 화산송이 모공 마스크팩 2X, 1개입, 1개</p>
+                                </a>
+                            </div>   
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 com-sm-12">
+                    <div class="copyright">
+                        <a href="#">
+                            <img src="img/logo.svg" width="30">
+                        </a>
+                        Bootstrap | 대표자 : 홍길동 | E-MAIL : info@info.com <br>
+                        사업자번호 : 123-56-78910 | 개인정보보호책임자 : 홍길동 | 통신판매업 : 2019-서울강남-0001 <br>
+                        주소 : 서울시 강남구
+                        <address> 🤔Bootstrap. ALL RIGHTS RESERVED </address>
+                    </div>
+                </div>
+                <div class="col-md-5 com-sm-12">
+                    <div class="footer_menu">
+                        <ul class="copyright_menu">
+                            <li><a href="#">고객지원</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">문의사항</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

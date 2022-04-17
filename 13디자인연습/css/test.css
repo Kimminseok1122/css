@@ -1,0 +1,55 @@
+header {
+    background-color: #eeeeee;
+    height: 47px;
+}
+
+.witdh_back {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.top_float {
+    overflow: hidden;
+}
+
+.top_left {
+    float: left;
+}
+
+
+.top_left > ul > li {
+    display: inline;
+    line-height: 43px;
+    
+}
+
+.top_left > ul > li > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #666666;
+    width: 130px;
+    font-size: 15px;  
+    text-align: center; 
+}
+
+.top_left > ul > li > .on{
+    background-color: #fff;
+    border-top: 1px solid #777;
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
+    border-bottom: 5px solid #037fc3;
+}
+
+.top_right {
+    float: right;
+}
+
+.top_right button {
+    padding: 3px 8px;
+    display: inline-block;
+    background-color: #fff;
+    color: #666666;
+    border: 1px solid #777;
+    margin-top: 10px;
+}
+

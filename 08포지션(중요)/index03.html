@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{margin: 0; padding: 0; list-style: none;}
+        .wrap{border: 1px solid #777; overflow: hidden; width: 500px; margin: 0 auto; position: relative; padding: 10px; box-sizing: border-box;}
+        .wrap-img{
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        .wrap-img img,.textimg img{width: 50px;}
+
+        .textimg {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        
+        .wrap-content, .wrap-control{
+            padding-left: 60px;
+        }
+
+        .wrap-content textarea{width: 100%; box-sizing: border-box; resize: vertical;/*세로만 사이징*/ padding: 10px;}
+        .wrap-control{overflow: hidden;}
+        .wrap-input{float: left;}
+        .wrap-control button{float: right;}
+        .wrap-input input {display: block; width: 150px; margin-bottom: 5px;}
+        .textarea{width: 500px; border: 1px solid #777; margin: 0 auto; box-sizing: border-box; position: relative; height: 60px; padding: 10px;}
+        .textcontent{padding-left: 70px; overflow: hidden;}
+        .textcontent button{float: right; }
+
+        .text-left {float: left; width: 50%;}
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap" >
+        <div class="wrap-img"><!--이미지영역-->
+            <img src="img/fish.png">
+        </div>
+        <div class="wrap-content"><!--내용영역-->
+            <textarea rows="10" placeholder="댓글등록"></textarea>
+        </div>
+        <div class="wrap-control"><!--버튼영역-->
+            <div class="wrap-input">
+                <input type="text">
+                <input type="text">
+            </div>
+            <button type="button">등록하기</button>
+        </div>
+    </div>
+
+    <!-- 글 영역-->
+    <div class="textarea">
+        <div class="textimg">
+            <img src="img/fish.png">
+        </div>
+        <div class="textcontent">
+            <div class="text-left">
+                <h3>제목</h3>
+                내용
+            </div>
+                <button type="button">삭제</button>
+                <button type="button">수정</button>
+        </div>
+    </div>
+
+</body>
+</html>

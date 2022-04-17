@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0; padding: 0; list-style: none;} 
+
+        .box{
+            background-color: black;
+            text-align: center;
+            height: 83px; /*마우스 올렸을때 안움직이게 하기 hover 더하기 height */
+        }
+        .header>li{
+            display: inline;
+        }
+        .header > li > a {
+            display: inline-block;
+            color: white;
+            width: 100px; /*padding을 이용해서 박스 넓이를 조절할수도있다*/
+            height: 80px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 80px;/*height 랑 똑같이 맞추면 가운대로*/
+        }
+        .header > li > a:hover{border-bottom: 3px solid #fff;} /*마우스 올렸을때 밑줄*/
+
+        .wrap{width: 1020px; margin: 0px auto; margin-top: 100px;}
+        .wrap .inner {border: 1px solid #777;}
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="box">
+            <ul class="header">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+            </ul>
+        </nav>
+        <article>
+            <img src="img/바탕화면.jpg">
+        </article>
+    </header>
+
+    <section class="wrap">
+        <h3>오늘의 발견</h3>
+        <div class="inner">
+            본문내용.....<br>
+            본문내용.....<br>
+            본문내용.....<br>
+            본문내용.....<br>
+            본문내용.....<br>
+            본문내용.....
+        </div>
+    </section>
+
+</body>
+</html>

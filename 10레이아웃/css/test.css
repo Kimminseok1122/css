@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+*{margin: 0; padding: 0;}
+ul li{list-style: none;}
+a {text-decoration: none;}
+html, body {font-family: 'Noto Sans KR', sans-serif;}
+#main_header { width: 960px; height: 160px; position: relative; margin: 0 auto;}
+.title { position: absolute; top: 30px; left: 10px;}
+.icon  li {display: inline; float: left;}
+.icon  .menu li a {display: inline-block; border: 1px solid #777; padding: 3px 5px;}
+.icon  .side li a {display: inline-block; border: 1px solid #777; padding: 6px 10px;}
+.icon  li:nth-child(1) a {border-radius: 8px 0 0 8px;}
+.icon  li:nth-child(5) a {border-radius: 0 8px 8px 0 ;}
+.icon .menu {position: absolute; top: 0; right: 0; overflow: hidden;}
+.icon .side {position: absolute; bottom: 10px; right: 0; overflow: hidden;}
+
+#main_section {width: 960px; margin: 0 auto; overflow: hidden;}
+#main_section .box{width: 750px; padding: 20px; box-sizing: border-box; border: 1px solid #777; margin-bottom: 10px;}
+#main_footer .box {width: 960px; text-align: center; margin: 0 auto; border: 1px solid #777;}
+.side_menu { float: right; width: 200px; border: 1px solid #777;}
+.box_side {float: left;}
+
+.side_menu > .button { overflow: hidden;}
+.side_menu > .button > label {float: left; width: 50%; background-color: #333; text-align: center; color: #fff;}
+.side_side a {border-top: none;}
+.side_side a { display: block; overflow: hidden; border: 1px solid #333; padding: 10px 10px; box-sizing: border-box;}
+.side_side img {float: left;}
+.side_side .side_content {float: right; margin-right: 40px;}
+
+
+
+
+
+
+
+
+
+
+

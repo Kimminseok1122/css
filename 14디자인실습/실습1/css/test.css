@@ -1,0 +1,11 @@
+.content_box { border: 1px solid #ddd; text-align: center; position: relative;}
+.content_text { padding: 15px 20px;}
+.content_text .content_info { overflow: hidden;}
+.content_text .content_info > ul { float: left;}
+.content_text .content_info > strong { float: right;}
+.content_text .content_info > ul > li {display: inline;}
+.content_text .content_info > ul > li > span {color:#fdcc11; font-size: ;}
+.hover_box {position: absolute; top: 0px; left: 0px; text-align: center; width: 100%; height: 100%; }
+.hover_box > a {display: block; width: 100%; height: 100%;}
+.hover_box > a > p { padding: 15px; opacity: 0;}
+.hover_box > a:hover > p { opacity: 1;}
